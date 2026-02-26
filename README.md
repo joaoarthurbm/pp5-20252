@@ -19,11 +19,11 @@
 
 ## A Prova
 
-## isAVL
+### isAVL (5.0)
 
+Você deve implementar o método isAVL, que verifica se uma BST é AVL, dada a definição que vimos em sala de aula. Para isso, você vai precisar implementar alguns métodos auxiliares, que também estão na classe BST.
 
-
-## PV check
+## PV check (5.0)
 
 Implementar o método `check` da class PVTree que retorna em qual caso cairia se fosse adicionado o número passado como parâmetro em uma PV.
 
