@@ -1,23 +1,19 @@
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
-import java.util.*;
-
 public class AssertsPV {
 
-    @Test
-    public void testCasosPV() {
+    // Run with: java -ea AssertsPV
+    public static void main(String[] args) {
         PVTree pv = new PVTree();
         //caso 1
-        assertEquals(1, pv.check(50));
+        assert pv.check(50) == 1;
 
         pv.add(50, false);
         // caso 2
-        assertEquals(2, pv.check(25));
+        assert pv.check(25) == 2;
         pv.add(25, true);
         pv.add(75, true);
         
         // caso 3
-        assertEquals(3, pv.check(25));
+        assert pv.check(25) == 3;
 
         pv = new PVTree();
         pv.add(50, false);
@@ -25,28 +21,21 @@ public class AssertsPV {
         pv.add(75, false);
         pv.add(12, true);
         // caso 4.1
-        assertEquals(4, pv.check(15));
+        assert pv.check(15) == 4;
 
         pv.add(90, true);
         // caso 4.2
-        assertEquals(4, pv.check(80));
+        assert pv.check(80) == 4;
         
         // caso 5
-        assertEquals(5, pv.check(200));
-        assertEquals(5, pv.check(3));
-    }
+        assert pv.check(200) == 5;
+        assert pv.check(3) == 5;
 
-
-    @Test
-    public void testNivelComMaiorSoma() {
         PVTree bst = new PVTree();
-        assertEquals(-1, bst.nivelComMaiorSoma(), 
-            "Deve retornar -1 para árvore vazia");
+        assert bst.nivelComMaiorSoma() == -1;
 
         bst.add(10);
-        assertEquals(0, bst.nivelComMaiorSoma(), 
-            "Deve retornar 0 para árvore com um único nó");
-
+        assert bst.nivelComMaiorSoma() == 0;
 
         bst = new PVTree();
         bst.add(41);
@@ -58,8 +47,8 @@ public class AssertsPV {
         bst.add(91);
         bst.add(32);
         bst.add(72);
-        bst.add(99);       
-        assertEquals(3, bst.nivelComMaiorSoma());
+        bst.add(99);
+        assert bst.nivelComMaiorSoma() == 3;
 
         bst = new PVTree();
         bst.add(15);
@@ -70,12 +59,12 @@ public class AssertsPV {
         bst.add(71);
         bst.add(5);
         bst.add(50);
-        assertEquals(2, bst.nivelComMaiorSoma());
+        assert bst.nivelComMaiorSoma() == 2;
 
         bst = new PVTree();
         bst.add(61);
         bst.add(400);
-        assertEquals(1, bst.nivelComMaiorSoma());
+        assert bst.nivelComMaiorSoma() == 1;
 
         bst = new PVTree();
         bst.add(56);
@@ -86,10 +75,7 @@ public class AssertsPV {
         bst.add(94);
         bst.add(10);
         bst.add(99);
-        assertEquals(2, bst.nivelComMaiorSoma());
-    
-
+        assert bst.nivelComMaiorSoma() == 2;
     }
-
 
 }
