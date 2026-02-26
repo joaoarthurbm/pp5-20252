@@ -12,7 +12,8 @@
 
 > Os testes estarão no arquivo Asserts.java no diretório **/src/main/java/**.
 
-> Executando os testes: `javac Asserts.java ; java -ea Asserts`
+> Executando os testes: `javac AssertsAVL.java ; java -ea AssertsAVL`
+> Executando os testes: `javac AssertsPV.java ; java -ea AssertsPV`
 
 > Não mude nenhuma assinatura de método, nome de classe ou localização dos arquivos. Mas você pode/deve criar outros métodos e classes, desde que passem nos testes.
 
@@ -36,16 +37,16 @@ Veja os asserts em Asserts.java para ter clareza da definição. Pode considerar
 
 ## Entregando a prova
 
-> ⚠️ **Importante:** Todos os comandos abaixo devem ser executados no **diretório pai** do projeto, ou seja, no diretório que **contém** o diretótio `template-pp4-20252/`. 
+> ⚠️ **Importante:** Todos os comandos abaixo devem ser executados no **diretório pai** do projeto, ou seja, no diretório que **contém** o diretótio `pp5-20252/`. 
 
 ---
 
 ### Passo 1: Gerar o arquivo compactado da sua solução
 
-Execute o comando abaixo **no diretório pai** do projeto (o diretório que contém `template-pp4-20252/`):
+Execute o comando abaixo **no diretório pai** do projeto (o diretório que contém `pp5-20252/`):
 
 ```bash
-tar zcvf nome-sobrenome-matricula.tar.gz template-pp4-20252/
+tar zcvf nome-sobrenome-matricula.tar.gz pp5-20252/
 ```
 ---
 
@@ -54,7 +55,7 @@ tar zcvf nome-sobrenome-matricula.tar.gz template-pp4-20252/
 Execute o comando abaixo **no mesmo diretório do Passo 1**:
 
 ```bash
-bash template-pp4-20252/submit-answer.sh pp4 nome-sobrenome-matricula.tar.gz
+bash pp5-20252/submit-answer.sh pp5 nome-sobrenome-matricula.tar.gz
 ```
 
 Importante: a senha é `leda`
