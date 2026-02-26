@@ -26,13 +26,13 @@ Você deve implementar o método isAVL, que verifica se uma BST é AVL, dada a d
 
 ## PV check (5.0)
 
-Implementar o método `check` da classe PVTemplate que retorna em qual caso cairia se fosse adicionado o número passado como parâmetro em uma PV.
+Implementar o método `check` da class PVTree que retorna em qual caso cairia se fosse adicionado o número passado como parâmetro em uma PV.
 
 A implementação base já contem o esquema de cores do nó. O atributo `isRed` do nó determina se ele é vermelho ou não. Se não for vermelho (isRed == false), ele é preto.
 
 Seu código recebe o valor que iria ser adicionado em uma PV válida. Você só precisa checar qual caso seria o da adição e retornar o número que identifica o caso (1, 2, 3, 4 ou 5).
  
-Veja os asserts em AssertsPV.java para ter clareza da definição. Pode considerar que não há elementos repetidos. Lembre-se que `null` é preto.
+Veja os asserts para ter clareza da definição. Pode considerar que não há elementos repetidos. Lembre-se que `null` é preto.
 
 
 ## Entregando a prova
