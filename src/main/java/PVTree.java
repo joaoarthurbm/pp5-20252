@@ -19,11 +19,6 @@ public class PVTree {
             this.add(v[i], true);
     }
 
-    //TODO implementar
-    public int nivelComMaiorSoma() {
-        return -1;
-    }
-
     public void add(int v) {
         add(v, false);
     }
