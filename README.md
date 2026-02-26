@@ -4,33 +4,34 @@
 * Email (@ccc): 
 * Matrícula: 
 
-# Prova Prática 4
+# Prova Prática 5
 
 ## O template
 
 > O código java estará (ou você terá que colocar) no diretório **/src/main/java/**
 
-> Os testes estarão na classe Asserts no diretório **/src/main/java/**
+> Os testes estarão no arquivo Asserts.java no diretório **/src/main/java/**.
+
+> Executando os testes: `javac Asserts.java ; java -ea Asserts`
 
 > Não mude nenhuma assinatura de método, nome de classe ou localização dos arquivos. Mas você pode/deve criar outros métodos e classes, desde que passem nos testes.
 
 
 ## A Prova
 
-## Conta menores
+## isAVL
 
-Implementar o método `contaMenores(int k)` que conta os valores menores do que k em uma BST.
 
-Veja os testes para ter clareza da definição. 
-Pode considerar que não há elementos repetidos na BST.
-Você **não** pode considerar que k é um valor presente na BST.
 
-## Max-heap to Min-heap
+## PV check
 
-Dado que a implementação fornecida da classe Heap é para max-heap, implemente o método (está comentado no código) `toMinHeap()` que transforma o heap em um min-heap, ou seja, todo
-e qualquer nó é menor que o seus filhos.
+Implementar o método `check` da class PVTree que retorna em qual caso cairia se fosse adicionado o número passado como parâmetro em uma PV.
 
-Restrições: **você não pode criar nenhum método adicional.** Você apenas pode modificar os métodos existentes (conteúdo e nome) na classe Heap.
+A implementação base já contem o esquema de cores do nó. O atributo `isRed` do nó determina se ele é vermelho ou não. Se não for vermelho (isRed == false), ele é preto.
+
+Seu código recebe o valor que iria ser adicionado em uma PV válida. Você só precisa checar qual caso seria o da adição e retornar o número que identifica o caso (1, 2, 3, 4 ou 5).
+ 
+Veja os asserts em Asserts.java para ter clareza da definição. Pode considerar que não há elementos repetidos. Lembre-se que `null` é preto.
 
 
 ## Entregando a prova
