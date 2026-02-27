@@ -9,9 +9,6 @@
 ## O template
 
 > O código java estará (ou você terá que colocar) no diretório **/src/main/java/**
-
-> Os testes estarão no arquivo Asserts.java no diretório **/src/main/java/**.
-
 > Executando os testes: `javac AssertsAVL.java ; java -ea AssertsAVL`
 > Executando os testes: `javac AssertsPV.java ; java -ea AssertsPV`
 
