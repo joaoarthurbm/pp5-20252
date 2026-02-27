@@ -9,8 +9,10 @@
 ## O template
 
 > O código java estará (ou você terá que colocar) no diretório **/src/main/java/**
-> Executando os testes: `javac AssertsAVL.java ; java -ea AssertsAVL`
-> Executando os testes: `javac AssertsPV.java ; java -ea AssertsPV`
+
+> Executando os testes: `javac BST.java; javac AssertsAVL.java ; java -ea AssertsAVL`
+
+> Executando os testes: `javac PVTree.java; javac AssertsPV.java ; java -ea AssertsPV`
 
 > Não mude nenhuma assinatura de método, nome de classe ou localização dos arquivos. Mas você pode/deve criar outros métodos e classes, desde que passem nos testes.
 
