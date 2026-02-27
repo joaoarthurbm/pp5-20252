@@ -13,7 +13,7 @@ public class AssertsPV {
         pv.add(75, true);
         
         // caso 3
-        assert pv.check(25) == 3;
+        assert pv.check(23) == 3;
 
         pv = new PVTree();
         pv.add(50, false);
