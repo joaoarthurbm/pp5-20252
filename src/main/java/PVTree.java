@@ -2,7 +2,7 @@ import java.util.*;
 
 public class PVTree {
 
-    private Node root;
+    private NodePV root;
     private int size;
     
     public boolean isEmpty() {
@@ -30,27 +30,27 @@ public class PVTree {
     public void add(int element, boolean isRed) {
         this.size += 1;
         if (isEmpty())
-            this.root = new Node(element, isRed);
+            this.root = new NodePV(element, isRed);
         else {
             
-            Node aux = this.root;
+            NodePV aux = this.root;
             
             while (aux != null) {
                 
                 if (element < aux.value) {
                     if (aux.left == null) { 
-                        Node newNode = new Node(element, isRed);
-                        aux.left = newNode;
-                        newNode.parent = aux;
+                        NodePV newNodePV = new NodePV(element, isRed);
+                        aux.left = newNodePV;
+                        newNodePV.parent = aux;
                         return;
                     }
                     
                     aux = aux.left;
                 } else {
                     if (aux.right == null) { 
-                        Node newNode = new Node(element, isRed);
-                        aux.right = newNode;
-                        newNode.parent = aux;
+                        NodePV newNodePV = new NodePV(element, isRed);
+                        aux.right = newNodePV;
+                        newNodePV.parent = aux;
                         return;
                     }
                     
@@ -66,7 +66,7 @@ public class PVTree {
      * Retorna o nó que contém o valor máximo da árvore. Implementação recursiva.
      * @return o nó contendo o valor máximo da árvore ou null se a árvore estiver vazia.
      */
-    public Node min() {
+    public NodePV min() {
         if (isEmpty()) return null;
         return min(this.root);
     }
@@ -76,7 +76,7 @@ public class PVTree {
      * @param a raiz da árvore.
      * @return o nó contendo o valor máximo da árvore ou null se a árvore estiver vazia.
      */
-    private Node min(Node node) {
+    private NodePV min(NodePV node) {
         if (node.left == null) return node;
         else return min(node.left);
     }
@@ -85,10 +85,10 @@ public class PVTree {
      * Retorna o nó que contém o valor máximo da árvore. Implementação iterativa.
      * @return o nó contendo o valor máximo da árvore ou null se a árvore estiver vazia.
      */
-    public Node max() {
+    public NodePV max() {
         if (isEmpty()) return null;
         
-        Node node = this.root;
+        NodePV node = this.root;
         while(node.right != null)
             node = node.right;
         
@@ -101,7 +101,7 @@ public class PVTree {
      * @return o nó contendo o valor máximo da árvore ou null se a árvore estiver vazia.
      */
     
-    private Node max(Node node) {
+    private NodePV max(NodePV node) {
         if (node.right == null) return node;
         else return max(node.right);
     }
@@ -114,9 +114,9 @@ public class PVTree {
      * @return O nó contendo o elemento procurado. O método retorna null caso
      * o elemento não esteja presente na árvore.
      */
-    public Node search(int element) {
+    public NodePV search(int element) {
         
-        Node aux = this.root;
+        NodePV aux = this.root;
         
         while (aux != null) {   
             if (aux.value == element) return aux;
@@ -135,7 +135,7 @@ public class PVTree {
      * @return O nó contendo o elemento procurado. O método retorna null caso
      * o elemento não esteja presente na árvore.
      */
-    public Node recursiveSearch(int element) {
+    public NodePV recursiveSearch(int element) {
         return recursiveSearch(this.root, element);
     }
     
@@ -147,7 +147,7 @@ public class PVTree {
      * @return O nó contendo o elemento procurado. O método retorna null caso
      * o elemento não esteja presente na árvore.
      */
-    private Node recursiveSearch(Node node, int element) {
+    private NodePV recursiveSearch(NodePV node, int element) {
         if (node == null) return null;
         if (element == node.value) return node;
         if (element < node.value) return recursiveSearch(node.left, element);
@@ -157,15 +157,15 @@ public class PVTree {
 }
 
     
-class Node {
+class NodePV {
     
     int value;
-    Node left;
-    Node right;
-    Node parent;
+    NodePV left;
+    NodePV right;
+    NodePV parent;
     boolean isRed;
     
-    Node(int v, boolean isRed) {
+    NodePV(int v, boolean isRed) {
         this.value = v;
         this.isRed = isRed;
     }
