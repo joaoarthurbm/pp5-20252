@@ -37,7 +37,7 @@ Veja os asserts para ter clareza da definição. Pode considerar que não há el
 
 ## Entregando a prova
 
-> ⚠️ **Importante:** Todos os comandos abaixo devem ser executados no **diretório pai** do projeto, ou seja, no diretório que **contém** o diretótio `pp5-20252/`. 
+> ⚠️ **Importante:** Todos os comandos abaixo devem ser executados no **diretório pai** do projeto, ou seja, no diretório que **contém** o diretório `pp5-20252/`. 
 
 ---
 
